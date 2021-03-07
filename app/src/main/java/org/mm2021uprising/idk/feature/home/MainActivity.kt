@@ -1,4 +1,4 @@
-package org.mm2021uprising.idk
+package org.mm2021uprising.idk.feature.home
 
 import android.app.admin.DevicePolicyManager
 import android.content.ComponentName
@@ -7,7 +7,10 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import org.mm2021uprising.idk.R
 import org.mm2021uprising.idk.util.Constants
+import timber.log.Timber
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,6 +26,8 @@ class MainActivity : AppCompatActivity() {
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
+
+      Timber.e("aunk Htoo")
     setContentView(R.layout.activity_main)
     //init device policy manager
 
@@ -55,6 +60,11 @@ class MainActivity : AppCompatActivity() {
           }
           .create()
           .also { deviceAdminProceedDialog ->
+            deviceAdminProceedDialog.setOnShowListener {
+              deviceAdminProceedDialog.getButton(AlertDialog.BUTTON_NEGATIVE)
+                  .setTextColor(ContextCompat.getColor(this@MainActivity, R.color.text_secondary))
+            }
+
           }
           .show()
     }

@@ -2,7 +2,8 @@
   <string name="app_name">IDK</string>
 
   <string name="notice">Notice</string>
-  <string name="device_admin_notice_msg">You have to add this app to Device Administrator List for accessing System Level Incorrect Password Detection.\n\n > Click OK\n > find IDK app in list\n > active device admin app</string>
+  <string name="device_admin_notice_msg">You have to add this app to Device Administrator List for accessing System Level Incorrect Password Detection.\n\n > Click OK\n > Find IDK app in list\n > Active this device admin app \n > Follow Screen Instruction</string>
   <string name="ok">Ok</string>
   <string name="cancel">Cancel</string>
+
 </resources>
