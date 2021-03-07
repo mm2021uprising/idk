@@ -71,7 +71,7 @@ dependencies {
   coreLibraryDesugaring(CommonLibs.desugar_lib)
 
   implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-  
+
   implementation(Kotlin.stdblib_jdk)
   implementation(KotlinCoroutine.android)
 
@@ -93,4 +93,6 @@ dependencies {
   implementation(AndroidXConstraintLayout.constraint_layout)
 
   implementation(CommonLibs.timber)
+
+  implementation(CommonLibs.dexter)
 }
